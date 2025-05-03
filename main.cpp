@@ -9,7 +9,8 @@ int main() {
         cout << "1. Book Room\n";
         cout << "2. Display Booked Rooms\n";
         cout << "3. Check Out\n";
-        cout << "4. Exit\n";
+        cout << "4. Available Rooms\n";
+        cout << "5. Exit\n";
         cout << "Enter Your Choice: ";
         cin >> choice;
 
@@ -24,6 +25,9 @@ int main() {
                 hotel.checkoutRoom();
                 break;
             case 4:
+                hotel.checkRoomAvailability();
+                break;
+            case 5:
                 cout << "Exiting... Thank you!\n";
                 return 0;
             default:

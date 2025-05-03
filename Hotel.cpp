@@ -72,6 +72,8 @@ void Hotel::checkoutRoom() {
             customers.erase(customers.begin() + i); // Here you know the exact position by i, so directly erase
             bookedRooms.erase(remove(bookedRooms.begin(), bookedRooms.end(), roomNumber), bookedRooms.end()); // While here we should use remove to move that to tail and then erase the tail i.e. end()
             cout << "Room " << roomNumber << " checked out successfully." << endl;
+            // Add room number back to available rooms
+            roomNumbers.push_back(roomNumber); 
             found = true;
             break;
         }
